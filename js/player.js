@@ -27,6 +27,10 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     const perPlayerField = document.getElementById('per-player-field');
     const perPlayerString = perPlayerField.value;
     const perPlayerValue = parseFloat(perPlayerString);
+
+    const playerList = document.getElementById('best-player-select');
+    const list = playerList.querySelectorAll('li');
+    const calculate = list.length * perPlayerValue;
     
 
 })
