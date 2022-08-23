@@ -23,14 +23,25 @@ function playerSelect(element){
     display(playerArray);
 }
 
-document.getElementById('calculate-btn').addEventListener('click',function(){
+function calculate(){
     const perPlayerField = document.getElementById('per-player-field');
     const perPlayerString = perPlayerField.value;
     const perPlayerValue = parseFloat(perPlayerString);
 
     const playerList = document.getElementById('best-player-select');
     const list = playerList.querySelectorAll('li');
-    const calculate = list.length * perPlayerValue;
+    const element = list.length;
+    const calculate = element  * perPlayerValue;
+
+    const playerExpenses = document.getElementById('player-Expenses');
+    const expensesString = playerExpenses.innerText;
+    const expensesValue = parseFloat(expensesString);
+    playerExpenses.innerText = calculate;
     
+}
+
+document.getElementById('calculate-btn').addEventListener('click',function(){
+    const playerExpenses = calculate();
 
 })
+
