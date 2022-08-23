@@ -20,6 +20,13 @@ function playerSelect(element){
     playerArray.push(plyaerobj);
 
     document.getElementById('total-selected-player').innerText = playerArray.length;
-
     display(playerArray);
 }
+
+document.getElementById('calculate-btn').addEventListener('click',function(){
+    const perPlayerField = document.getElementById('per-player-field');
+    const perPlayerString = perPlayerField.value;
+    const perPlayerValue = parseFloat(perPlayerString);
+    
+
+})
